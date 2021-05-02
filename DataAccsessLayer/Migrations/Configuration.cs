@@ -9,6 +9,7 @@
     {
         public Configuration()
         {
+            // Burayı true yapıyoruz.
             AutomaticMigrationsEnabled = true;
         }
 

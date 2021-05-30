@@ -1,4 +1,6 @@
-﻿@{
+﻿@using EntityLayer.Concrete
+@model List<Contact>
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
@@ -145,21 +147,24 @@
                         <div class="table-responsive mailbox-messages">
                             <table class="table table-hover table-striped">
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="icheck-primary">
-                                                <input type="checkbox" value="" id="check1">
-                                                <label for="check1"></label>
-                                            </div>
-                                        </td>
-                                        <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                        <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                        <td class="mailbox-subject">
-                                            <b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
-                                        </td>
-                                        <td class="mailbox-attachment"></td>
-                                        <td class="mailbox-date">5 mins ago</td>
-                                    </tr>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="icheck-primary">
+                                                    <input type="checkbox" value="" id="check1">
+                                                    <label for="check1"></label>
+                                                </div>
+                                            </td>
+                                            <td class="mailbox-star"><a href="/Contact/GetContactDetails/@item.ContactID"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/Contact/GetContactDetails/@item.ContactID">@item.UserName</a></td>
+                                            <td class="mailbox-subject">
+                                                <b>@item.Subject</b> - @item.Message.Substring(0,25)...
+                                            </td>
+                                            <td class="mailbox-attachment"></td>
+                                            <td class="mailbox-date">5 mins ago</td>
+                                        </tr>
+                                    }
                                 </tbody>
                             </table>
                             <!-- /.table -->

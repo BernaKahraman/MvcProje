@@ -7,8 +7,8 @@
 
 @{ string color = "";}
 @{ string CategoriStatus = "";
-    string StatusClass = "";
-    string StatusImage = "";}
+    string StatusColor = "";
+    string StatusIcon = "";}
 
 <!DOCTYPE html>
 <html>
@@ -64,6 +64,7 @@
                         </tr>
                     </thead>
                     <tbody>
+
                         @foreach (var item in Model)
                         {
                             if (item.Category.CategoryName == "Tiyatro")
@@ -78,21 +79,29 @@
                             {
                                 color = "badge badge-info";
                             }
-                            if (item.Category.CategoryName == "Seyahat")
+                            if (item.Category.CategoryName == "Film")
                             {
-                                color = "badge badge-secondary";
+                                color = "badge badge-danger";
+                            }
+                            if (item.Category.CategoryName == "Dizi")
+                            {
+                                color = "badge badge-dark";
+                            }
+                            if (item.Category.CategoryName == "Kitap")
+                            {
+                                color = "badge badge-primary";
                             }
                             if (item.HeadingStatus == true)
                             {
                                 CategoriStatus = "Pasif Yap";
-                                StatusClass = "btn btn-danger btn-sm";
-                                StatusImage = "fas fa-trash-alt";
+                                StatusColor = "btn btn-danger btn-sm";
+                                StatusIcon = "fas fa-trash";
                             }
-                            if (item.HeadingStatus == false)
+                            else if (item.HeadingStatus == false)
                             {
                                 CategoriStatus = "Aktif Yap";
-                                StatusClass = "btn btn-success btn-sm";
-                                StatusImage = "fas fa-trash-restore-alt";
+                                StatusColor = "btn btn-success btn-sm";
+                                StatusIcon = "fas fa-trash-restore";
                             }
                             <tr>
                                 <td>
@@ -139,8 +148,8 @@
                                         </i>
                                         Düzenle
                                     </a>
-                                     <a class="@StatusClass" href="/Heading/DeleteHeading/@item.HeadingID">
-                                        <i class="@StatusImage">
+                                    <a class="@StatusColor" href="/Heading/DeleteHeading/@item.HeadingID">
+                                        <i class="@StatusIcon">
                                         </i>
                                         @CategoriStatus
                                     </a>

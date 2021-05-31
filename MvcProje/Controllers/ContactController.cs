@@ -27,5 +27,9 @@ namespace MvcProje.Controllers
             return View(contactvalues);
 
         }
+        public PartialViewResult ContactPartial()
+        {
+            return PartialView();
+        }
     }
 }

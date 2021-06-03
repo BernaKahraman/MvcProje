@@ -35,6 +35,9 @@ namespace MvcProje.Controllers
             ViewBag.StatusDiffrerent = difference;
 
 
+            var deger5 = c.Contacts.Count().ToString();
+            ViewBag.ContactCount = deger5;
+
             return View();
            
         }

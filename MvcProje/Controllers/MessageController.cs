@@ -16,6 +16,7 @@ namespace MvcProje.Controllers
         public ActionResult Inbox()
         {
             var MessageList = cm.GetListInbox();
+           
             return View(MessageList);
         }
         public ActionResult Sendbox()

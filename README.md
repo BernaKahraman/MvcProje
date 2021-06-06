@@ -44,9 +44,11 @@
   <li>Başlık İşlemleri</li>
   <li>Popup Kullanımı</li>
   <li>Hakkımda Sayfası</li>
-  
+</ul>
+ 
 <b>Ders 58-68 :</b>
 <ul>
   <li>Mesaj Kutusu İşlemleri</li>
   <li>Hata Sayfaları</li>
   <li>Galeri Oluşturma</li>
+</ul>

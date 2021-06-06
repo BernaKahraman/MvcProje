@@ -36,3 +36,17 @@
   <li>Temanın Yüklenmesi - Düzenlenmesi</li>
   <li>Sidebar İşlemleri</li>
 </ul> 
+
+<p>Ders 41-57 :</p>
+<ul>
+  <li>Entity State Komutları</li>
+  <li>Yazar İşlemleri</li>
+  <li>Başlık İşlemleri</li>
+  <li>Popup Kullanımı</li>
+  <li>Hakkımda Sayfası</li>
+  
+  <p>Ders 58-68 :</p>
+<ul>
+  <li>Mesaj Kutusu İşlemleri</li>
+  <li>Hata Sayfaları</li>
+  <li>Galeri Oluşturma</li>

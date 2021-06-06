@@ -45,7 +45,7 @@
   <li>Popup Kullanımı</li>
   <li>Hakkımda Sayfası</li>
   
-  <p>Ders 58-68 :</p>
+<b>Ders 58-68 :</b>
 <ul>
   <li>Mesaj Kutusu İşlemleri</li>
   <li>Hata Sayfaları</li>

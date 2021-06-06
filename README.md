@@ -56,6 +56,7 @@
 
 
 ![Diyagram](https://user-images.githubusercontent.com/83236586/120922097-ebb57600-c6cf-11eb-8bf4-4c8ca54016e1.JPG)
+<br>
 ![Kategori](https://user-images.githubusercontent.com/83236586/120922100-ef48fd00-c6cf-11eb-9386-6dbf8f735b54.JPG)
 ![Başlıklar](https://user-images.githubusercontent.com/83236586/120922102-f07a2a00-c6cf-11eb-865f-261ff7d4a59b.JPG)
 ![Yazarlar](https://user-images.githubusercontent.com/83236586/120922105-f40db100-c6cf-11eb-8f3d-182701d2e169.JPG)

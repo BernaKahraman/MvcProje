@@ -8,4 +8,17 @@
   <li>Projenin oluşturulması</li>
   <li>View Controller Ve Layout Kavramları</li>
   <li>Katmanların Oluşturulması</li>
+  <li>Entity Katmanı Sınıflarının Oluşturulması</li>
+  <li>İlişkilerin Oluşturulması</li>
+  <li>Web Config Yapılandırılması ve Bağlantı Ayarları</li>
+  <li>Migrations ve Veri Tabanının Oluşturulması</li>
+  <li>SQL Veri Girişleri</li>
+  <li>Abstract Ve Interface Bileşenleri</li>
+  <li>Repository Sınıfı Ve Metotların İçinin Doldurulması</li>
+  <li>IRepository Interface</li>
+  <li>Generic Interface</li>
+  <li>Business Layer</li>
 </ul>  
+
+
+<p>1. Sertifika Görevi: </p>

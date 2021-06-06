@@ -20,5 +20,19 @@
   <li>Business Layer</li>
 </ul>  
 
-
-<p>1. Sertifika Görevi: </p>
+<p>Ders 21-40 :</p>
+<ul>
+  <li>Bootstrap</li>
+  <li>Kategorilerin Listelenmesi, Yeni Kategori Girişi</li>
+  <li>Break Point</li>
+  <li>HttpGet ve HttpPost Attributeleri</li>
+  <li>Ekleme Hataları</li>
+  <li>Business Abstract & ICategoryService</li>
+  <li>Constructor Business Metot</li>
+  <li>Entity Framework Dal</li>
+  <li>Fluent Validation</li>
+  <li>Validasyon İşlemi</li>
+  <li>Validation Messagefor ile Validator Sınıfındaki Mesajlarının UI'da Listelenmesi</li>
+  <li>Temanın Yüklenmesi - Düzenlenmesi</li>
+  <li>Sidebar İşlemleri</li>
+</ul> 

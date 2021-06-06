@@ -3,7 +3,7 @@
 <p>Eğitmen : Murat Yücedağ - Eğitime ulaşmak için  <a href="https://www.youtube.com/watch?v=yFToRUL6h8A&list=PLKnjBHu2xXNNQJehhCg--CzQQMHXTsFAb">Tıklayınız</a></p>
 
 <h2>Proje İlerleyişi</h2>
-<p>Ders 1-20 :</p>
+<b>Ders 1-20 :</b>
 <ul>
   <li>Projenin oluşturulması</li>
   <li>View Controller Ve Layout Kavramları</li>
@@ -20,7 +20,7 @@
   <li>Business Layer</li>
 </ul>  
 
-<p>Ders 21-40 :</p>
+<b>Ders 21-40 :</b>
 <ul>
   <li>Bootstrap</li>
   <li>Kategorilerin Listelenmesi, Yeni Kategori Girişi</li>
@@ -37,7 +37,7 @@
   <li>Sidebar İşlemleri</li>
 </ul> 
 
-<p>Ders 41-57 :</p>
+<b>Ders 41-57 :</b>
 <ul>
   <li>Entity State Komutları</li>
   <li>Yazar İşlemleri</li>

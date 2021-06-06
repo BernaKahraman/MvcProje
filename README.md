@@ -52,3 +52,17 @@
   <li>Hata Sayfaları</li>
   <li>Galeri Oluşturma</li>
 </ul>
+
+
+
+![Diyagram](https://user-images.githubusercontent.com/83236586/120922097-ebb57600-c6cf-11eb-8bf4-4c8ca54016e1.JPG)
+![Kategori](https://user-images.githubusercontent.com/83236586/120922100-ef48fd00-c6cf-11eb-9386-6dbf8f735b54.JPG)
+![Başlıklar](https://user-images.githubusercontent.com/83236586/120922102-f07a2a00-c6cf-11eb-865f-261ff7d4a59b.JPG)
+![Yazarlar](https://user-images.githubusercontent.com/83236586/120922105-f40db100-c6cf-11eb-8f3d-182701d2e169.JPG)
+![Hakkımızda](https://user-images.githubusercontent.com/83236586/120922108-f53ede00-c6cf-11eb-9e6c-e1d9fb0f0950.JPG)
+![Mesajlar](https://user-images.githubusercontent.com/83236586/120922110-f7a13800-c6cf-11eb-828d-69d024e80790.JPG)
+![İstatistikler](https://user-images.githubusercontent.com/83236586/120922112-f96afb80-c6cf-11eb-8481-efccf3a4f207.JPG)
+![Galeri](https://user-images.githubusercontent.com/83236586/120922113-fc65ec00-c6cf-11eb-8d70-c60bcc5add8b.JPG)
+
+
+

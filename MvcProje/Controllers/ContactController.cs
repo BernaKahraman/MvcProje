@@ -18,7 +18,7 @@ namespace MvcProje.Controllers
         ContactValidator cv = new ContactValidator();
         Context _context = new Context();
 
-        
+ 
         public ActionResult Index()
         {
             var contactvalues = cm.GetList();

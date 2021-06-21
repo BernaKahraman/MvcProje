@@ -15,7 +15,9 @@ namespace MvcProje.Controllers
         // GET: WriterPanel
         HeadingManager hm = new HeadingManager(new EfHeadingDal());
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
+
         Context c = new Context();
+     
 
         public ActionResult WriterProfile()
         {
@@ -27,6 +29,7 @@ namespace MvcProje.Controllers
             
             p = (string)Session["WriterMail"];
             var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
+           
             var values = hm.GetListByWriter(writeridinfo);
             return View(values);
         }
@@ -34,6 +37,8 @@ namespace MvcProje.Controllers
         [HttpGet]
         public ActionResult NewHeading()
         {
+            
+          
             List<SelectListItem> valuecategory = (from x in cm.GetList()
                                                   select new SelectListItem
                                                   {
@@ -47,6 +52,10 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult NewHeading(Heading p)
         {
+
+            string writermailinfo= (string)Session["WriterMail"];
+            var writeridinfo = c.Writers.Where(x => x.WriterMail == writermailinfo).Select(y => y.WriterID).FirstOrDefault();
+           
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.WriterID = writeridinfo;
             p.HeadingStatus = true;
@@ -57,7 +66,7 @@ namespace MvcProje.Controllers
         [HttpGet]
         public ActionResult EditHeading(int id)
         {
-            List<SelectListItem> valuecategory = (from x in cm.GetList()
+            var valuecategory = (from x in cm.GetList()
                                                   select new SelectListItem
                                                   {
                                                       Text = x.CategoryName,

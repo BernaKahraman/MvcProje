@@ -2075,6 +2075,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Screenshot\1.JPG" />
+    <Content Include="Screenshot\Yetenek Kartı 1.JPG" />
+    <Content Include="Screenshot\Yetenek Kartı 2.JPG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="AdminLTE-3.0.4\.babelrc" />

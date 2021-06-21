@@ -59,6 +59,7 @@
     <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\ITalentDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
     <Compile Include="EntityFramework\EfImageFileDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
+    <Compile Include="EntityFramework\EfTalentDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202105021328302_mig1.cs" />
     <Compile Include="Migrations\202105021328302_mig1.designer.cs">
@@ -119,6 +121,18 @@
     <Compile Include="Migrations\202106211512396_mig-writer-role.cs" />
     <Compile Include="Migrations\202106211512396_mig-writer-role.designer.cs">
       <DependentUpon>202106211512396_mig-writer-role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106211550506_mig_talent_add.cs" />
+    <Compile Include="Migrations\202106211550506_mig_talent_add.designer.cs">
+      <DependentUpon>202106211550506_mig_talent_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106211716059_mig_talent_update.cs" />
+    <Compile Include="Migrations\202106211716059_mig_talent_update.designer.cs">
+      <DependentUpon>202106211716059_mig_talent_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106211803139_mig_talent_update1.cs" />
+    <Compile Include="Migrations\202106211803139_mig_talent_update1.designer.cs">
+      <DependentUpon>202106211803139_mig_talent_update1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,6 +183,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106211512396_mig-writer-role.resx">
       <DependentUpon>202106211512396_mig-writer-role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106211550506_mig_talent_add.resx">
+      <DependentUpon>202106211550506_mig_talent_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106211716059_mig_talent_update.resx">
+      <DependentUpon>202106211716059_mig_talent_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106211803139_mig_talent_update1.resx">
+      <DependentUpon>202106211803139_mig_talent_update1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

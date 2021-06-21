@@ -145,6 +145,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
+    <Compile Include="Controllers\TalentController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
     <Compile Include="Controllers\WriterPanelContentController.cs" />
@@ -2054,6 +2055,17 @@
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.css" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.css" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.js" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\css\style.css" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\images\5.jpg" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\images\fotograf.png" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\images\img1.jpg" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\images\sprite.png" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\index.html" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\js\bars.js" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\js\easyResponsiveTabs.js" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\js\jquery-1.11.1.min.js" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\js\jquery.circlechart.js" />
+    <Content Include="AdminLTE-3.0.4\Skills_Theme\web\w3layouts-License.txt" />
     <Content Include="AdminLTE-3.0.4\starter.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -2709,6 +2721,7 @@
     <Content Include="Views\WriterPanel\AllHeading.cshtml" />
     <Content Include="Views\WriterPanelContent\AddContent.cshtml" />
     <Content Include="Views\WriterPanelContent\ToDoList.cshtml" />
+    <Content Include="Views\Talent\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

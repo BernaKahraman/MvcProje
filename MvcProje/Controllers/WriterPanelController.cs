@@ -17,7 +17,6 @@ namespace MvcProje.Controllers
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
 
         Context c = new Context();
-     
 
         public ActionResult WriterProfile()
         {
@@ -89,6 +88,12 @@ namespace MvcProje.Controllers
             HeadingValue.HeadingStatus = false;
             hm.HeadingDelete(HeadingValue);
             return RedirectToAction("MyHeading");
+        }
+
+        public ActionResult AllHeading()
+        {
+            var headings = hm.GetList();
+            return View(headings);
         }
 
     }

@@ -15,8 +15,11 @@ namespace MvcProje.Controllers
     {
         WriterManager wm = new WriterManager (new EfWriterDal());
         WriterValidator writervalidator = new WriterValidator();
+
+        [Authorize]
         public ActionResult Index()
         {
+
             var WriterValues = wm.GetList();
             return View(WriterValues);
         }

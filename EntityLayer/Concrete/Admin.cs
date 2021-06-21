@@ -21,5 +21,12 @@ namespace EntityLayer.Concrete
         [StringLength(1)]
         public String AdminRole { get; set; }
 
+        [StringLength(1)]
+        public String WriterRole { get; set; }
+
+
+
+
+
     }
 }

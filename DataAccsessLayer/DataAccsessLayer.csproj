@@ -134,6 +134,10 @@
     <Compile Include="Migrations\202106211803139_mig_talent_update1.designer.cs">
       <DependentUpon>202106211803139_mig_talent_update1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106220942184_mig_about_update.cs" />
+    <Compile Include="Migrations\202106220942184_mig_about_update.designer.cs">
+      <DependentUpon>202106220942184_mig_about_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -192,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106211803139_mig_talent_update1.resx">
       <DependentUpon>202106211803139_mig_talent_update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106220942184_mig_about_update.resx">
+      <DependentUpon>202106220942184_mig_about_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

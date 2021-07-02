@@ -74,4 +74,7 @@
 ![admin girişi](https://user-images.githubusercontent.com/83236586/124275553-5e890400-db4b-11eb-9e2d-66a354adcbac.JPG)
 <br>
 ![yazar girişi](https://user-images.githubusercontent.com/83236586/124275568-63e64e80-db4b-11eb-8dad-0ac63d5b5df0.JPG)
+<br>
+![yazar paneli](https://user-images.githubusercontent.com/83236586/124275788-b0318e80-db4b-11eb-9b8f-da50e7613686.JPG)
+
 

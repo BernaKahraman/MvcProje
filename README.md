@@ -76,5 +76,7 @@
 ![yazar girişi](https://user-images.githubusercontent.com/83236586/124275568-63e64e80-db4b-11eb-8dad-0ac63d5b5df0.JPG)
 <br>
 ![yazar paneli](https://user-images.githubusercontent.com/83236586/124275788-b0318e80-db4b-11eb-9b8f-da50e7613686.JPG)
+<br>
+![site](https://user-images.githubusercontent.com/83236586/124275941-dd7e3c80-db4b-11eb-8750-7059bbda276e.JPG)
 
 

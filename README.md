@@ -1,3 +1,5 @@
+![admin girişi](https://user-images.githubusercontent.com/83236586/124275553-5e890400-db4b-11eb-9e2d-66a354adcbac.JPG)
+![yazar girişi](https://user-images.githubusercontent.com/83236586/124275568-63e64e80-db4b-11eb-8dad-0ac63d5b5df0.JPG)
 <h1 align="center">100 Derste MVC Proje Kampı</h1>
 <h3 align="center">Ekşi Sözlük Benzeri Web Sitesi</h3>
 <p>Eğitmen : Murat Yücedağ - Eğitime ulaşmak için  <a href="https://www.youtube.com/watch?v=yFToRUL6h8A&list=PLKnjBHu2xXNNQJehhCg--CzQQMHXTsFAb">Tıklayınız</a></p>

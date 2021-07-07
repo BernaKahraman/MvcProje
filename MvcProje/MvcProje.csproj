@@ -2806,6 +2806,7 @@
     <Content Include="Views\Content\Index.cshtml" />
     <Content Include="Views\Content\GetAllContent.cshtml" />
     <Content Include="Views\Chart\Index.cshtml" />
+    <Content Include="Views\Heading\HeadingReport.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

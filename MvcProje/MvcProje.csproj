@@ -2088,6 +2088,7 @@
     <Content Include="AdminLTE-3.0.4\web1\images\banner.jpg" />
     <Content Include="AdminLTE-3.0.4\web1\images\Basliklar.png" />
     <Content Include="AdminLTE-3.0.4\web1\images\close.png" />
+    <Content Include="AdminLTE-3.0.4\web1\images\coding-man.jpg" />
     <Content Include="AdminLTE-3.0.4\web1\images\contact.jpg" />
     <Content Include="AdminLTE-3.0.4\web1\images\Diyagram.png" />
     <Content Include="AdminLTE-3.0.4\web1\images\exp.jpg" />
@@ -2114,6 +2115,7 @@
     <Content Include="AdminLTE-3.0.4\web1\images\site.png" />
     <Content Include="AdminLTE-3.0.4\web1\images\stats.jpg" />
     <Content Include="AdminLTE-3.0.4\web1\images\testimonials.jpg" />
+    <Content Include="AdminLTE-3.0.4\web1\images\typing-laptop-close-up.jpg" />
     <Content Include="AdminLTE-3.0.4\web1\images\YazarGirisi.png" />
     <Content Include="AdminLTE-3.0.4\web1\images\Yazarlar.png" />
     <Content Include="AdminLTE-3.0.4\web1\images\yazarpaneli.png" />

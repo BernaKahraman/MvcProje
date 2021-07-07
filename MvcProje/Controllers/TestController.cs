@@ -17,5 +17,10 @@ namespace MvcProje.Controllers
         {
             return View();
         }
+
+        public ActionResult SweetAlert()
+        {
+            return View();
+        }
     }
 }

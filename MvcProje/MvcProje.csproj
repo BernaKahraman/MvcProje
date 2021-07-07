@@ -2807,6 +2807,7 @@
     <Content Include="Views\Content\GetAllContent.cshtml" />
     <Content Include="Views\Chart\Index.cshtml" />
     <Content Include="Views\Heading\HeadingReport.cshtml" />
+    <Content Include="Views\Test\SweetAlert.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public void AdminDelete(Admin admin)
         {
-            throw new NotImplementedException();
+            _adminDal.Delete(admin);
         }
 
         public void AdminUpdate(Admin admin)

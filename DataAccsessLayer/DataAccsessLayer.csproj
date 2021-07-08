@@ -61,6 +61,7 @@
     <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\IRoleDal.cs" />
     <Compile Include="Abstract\ITalentDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
     <Compile Include="EntityFramework\EfImageFileDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
+    <Compile Include="EntityFramework\EfRoleDal.cs" />
     <Compile Include="EntityFramework\EfTalentDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202105021328302_mig1.cs" />
@@ -158,6 +160,14 @@
     <Compile Include="Migrations\202107081326364_mig-9.designer.cs">
       <DependentUpon>202107081326364_mig-9.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107081552169_mig_role.cs" />
+    <Compile Include="Migrations\202107081552169_mig_role.designer.cs">
+      <DependentUpon>202107081552169_mig_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107081557148_mig_admin-roles.cs" />
+    <Compile Include="Migrations\202107081557148_mig_admin-roles.designer.cs">
+      <DependentUpon>202107081557148_mig_admin-roles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -231,6 +241,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107081326364_mig-9.resx">
       <DependentUpon>202107081326364_mig-9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107081552169_mig_role.resx">
+      <DependentUpon>202107081552169_mig_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107081557148_mig_admin-roles.resx">
+      <DependentUpon>202107081557148_mig_admin-roles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

@@ -5,11 +5,58 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Hakkımda Veri Listesi</h2>
+@{ string status = "";}
+@{ string statusButton = "";}
+
+<h2>Hakkımızda Veri Listesi </h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Hakkımda</th>
+        <th>Aktif veya Pasif İşlemi</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.AboutStatus == true)
+        {
+            status = "Pasif Yap";
+        }
+        if (item.AboutStatus == false)
+        {
+            status = "Aktif Yap";
+        }
+        if (item.AboutStatus == true)
+        {
+            statusButton = "btn btn-danger";
+        }
+        if (item.AboutStatus == false)
+        {
+            statusButton = "btn btn-warning";
+        }
+        <tr>
+            <th>@item.AboutID</th>
+            <td>@item.AboutDetails1</td>
+            <td><a href="/About/AktifveyaPasifDurum/@item.AboutID" class="@statusButton">@status</a></td>
+        </tr>
+    }
+</table>
+
+<div>
+    <div class="row gx-5">
+        <div class="col-7" style="margin-top:15px; margin-bottom:5px; margin-right:15px;">
+            @Html.Action("AboutPartial", "About")
+        </div>
+    </div>
+</div>
+
+@*<h2>Hakkımda Veri Listesi</h2>
+<br />
 <table class="table table-bordered">
     <tr>
         <th>ID</th>
         <th>Hakkımda Başlığı</th>
+        <th>Hakkımda Detayı</th>
         <th>Aktif Yap</th>
         <th>Pasif Yap</th>
     </tr>
@@ -17,11 +64,12 @@
     {
         <tr>
             <td>@item.AboutID</td>
-            <td>Başlık</td>
+            <td>@item.AboutDetails1</td>
+            <td>@item.AboutDetails2</td>
             <td><a href="#" class="btn btn-warning">Aktif Yap</a></td>
             <td><a href="#" class="btn btn-danger">Pasif Yap</a></td>
         </tr>
     }
 </table>
 
-@Html.Action("AboutPartial", "About")
+@Html.Action("AboutPartial", "About")*@

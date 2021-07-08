@@ -56,6 +56,7 @@
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
+    <Compile Include="Abstract\IDraftDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
     <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
+    <Compile Include="EntityFramework\EfDraftDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
     <Compile Include="EntityFramework\EfImageFileDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
@@ -144,6 +146,18 @@
     <Compile Include="Migrations\202107071540192_mig_5.designer.cs">
       <DependentUpon>202107071540192_mig_5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107081233062_mig_read.cs" />
+    <Compile Include="Migrations\202107081233062_mig_read.designer.cs">
+      <DependentUpon>202107081233062_mig_read.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107081246253_mig_isDraft.cs" />
+    <Compile Include="Migrations\202107081246253_mig_isDraft.designer.cs">
+      <DependentUpon>202107081246253_mig_isDraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107081326364_mig-9.cs" />
+    <Compile Include="Migrations\202107081326364_mig-9.designer.cs">
+      <DependentUpon>202107081326364_mig-9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -208,6 +222,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107071540192_mig_5.resx">
       <DependentUpon>202107071540192_mig_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107081233062_mig_read.resx">
+      <DependentUpon>202107081233062_mig_read.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107081246253_mig_isDraft.resx">
+      <DependentUpon>202107081246253_mig_isDraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107081326364_mig-9.resx">
+      <DependentUpon>202107081326364_mig-9.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

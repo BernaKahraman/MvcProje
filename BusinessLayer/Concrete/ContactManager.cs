@@ -43,5 +43,6 @@ namespace BusinessLayer.Concrete
         {
             return _contactDal.List();
         }
+
     }
 }

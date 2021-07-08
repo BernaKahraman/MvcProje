@@ -1,7 +1,8 @@
 ﻿@using EntityLayer.Concrete
-@model List<Message>
+@model List<Draft>
+
 @{
-    ViewBag.Title = "Sendbox";
+    ViewBag.Title = "Draft";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -16,7 +17,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Mesaj Sayfası</h1>
+                    <h1>Taslaklar Sayfası</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -29,7 +30,7 @@
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Gönderilen Mesajlar</h3>
+                        <h3 class="card-title">Taslak Mesajları</h3>
                         <div class="card-tools">
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control" placeholder="Mail kutusunda ara">
@@ -78,15 +79,15 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="/Message/GetMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Message/GetMessageDetails/@item.MessageID">@item.ReceiverMail</a></td>
+                                            <td class="mailbox-star"><a href="/Draft/GetDraftDetails/@item.DraftID"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/Draft/GetDraftDetails/@item.DraftID">@item.ReceiverMail</a></td>
                                             <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.MessageContent.Substring(0, 1)...
+                                                <b>@item.Subject</b> - @item.DraftContent.Substring(0, 1)...
                                             </td>
                                             <td class="mailbox-attachment"></td>
                                             <td class="mailbox-date">
                                                 <small>
-                                                    @(((DateTime)item.MessageDate).ToString("dd MMMM yyyy"))
+                                                    @(((DateTime)item.DraftDate).ToString("dd MMMM yyyy"))
                                                 </small>
                                             </td>
                                         </tr>
@@ -132,3 +133,4 @@
     <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
 </body>
 </html>
+

@@ -46,13 +46,28 @@
   <li>Hakkımda Sayfası</li>
 </ul>
  
-<b>Ders 58-68 :</b>
+<b>Ders 58-79 :</b>
 <ul>
   <li>Mesaj Kutusu İşlemleri</li>
   <li>Hata Sayfaları</li>
   <li>Galeri Oluşturma</li>
+  <li>Admin Login İşlemleri</li>
+  <li>Rolleme</li>
+  <li>Yazar İşlemleri</li>
+  <li>Session</li>
 </ul>
 
+<b>Ders 80-100 :</b>
+<ul>
+  <li>Vitrin Sayfası</li>
+  <li>Sayfalama İşlemleri</li>
+  <li>Galeri Oluşturma</li>
+  <li>Iframe</li>
+  <li>Google Chartlar</li>
+  <li>Raporlama</li>
+  <li>Yetkilendirme</li>
+  <li>Projenin Canlıya Taşınması</li>
+</ul>
 
 
 ![Diyagram](https://user-images.githubusercontent.com/83236586/120922097-ebb57600-c6cf-11eb-8bf4-4c8ca54016e1.JPG)

@@ -17,9 +17,26 @@
         @Html.Label("Açıklamayı yazınız")
         @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.CategoryDescription)
-        <br /><br />
-        <button class="btn btn-info">Kaydet</button>
-
-
+        <br />
+        <button class="btn btn-outline-primary" id="buton">Kategoriyi Ekle</button>
     </div>
+    <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+
 }
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
+<script>
+    $('#buton').click(function () {
+        swal({
+            title: "Tebrikler!",
+            text: "Kategori başarılı bir şekilde eklendi.",
+            buttons: false,
+            icon: "info",
+            timer: 6000
+        }).then(function () {
+            window.location.reload(false);
+            tr.hide();
+        });
+    });
+</script>

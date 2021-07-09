@@ -39,8 +39,10 @@ namespace MvcProje.Controllers
             ValidationResult results = writervalidator.Validate(p);
             if (results.IsValid)
             {
+                p.WriterStatus = true;
+                p.WriterRole = "B";
                 wm.WriterUpdate(p);
-                return RedirectToAction("AllHeading","WriterPanel");
+                return RedirectToAction("AllHeading", "WriterPanel");
             }
             else
             {
@@ -115,10 +117,24 @@ namespace MvcProje.Controllers
 
         public ActionResult DeleteHeading(int id)
         {
-            var HeadingValue = hm.GetByID(id); //önce id göre buldurma işlemi yapıyoruz
-            HeadingValue.HeadingStatus = false;
-            hm.HeadingDelete(HeadingValue);
+            var result = hm.GetByID(id);
+
+            if (result.HeadingStatus == true)
+            {
+                result.HeadingStatus = false;
+            }
+            else
+            {
+                result.HeadingStatus = true;
+            }
+
+            hm.HeadingDelete(result);
             return RedirectToAction("MyHeading");
+
+            //var HeadingValue = hm.GetByID(id); //önce id göre buldurma işlemi yapıyoruz
+            //HeadingValue.HeadingStatus = false;
+            //hm.HeadingDelete(HeadingValue);
+            //return RedirectToAction("MyHeading");
         }
 
         public ActionResult AllHeading(int p=1)

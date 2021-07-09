@@ -168,6 +168,10 @@
     <Compile Include="Migrations\202107081557148_mig_admin-roles.designer.cs">
       <DependentUpon>202107081557148_mig_admin-roles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107090928512_mig_length.cs" />
+    <Compile Include="Migrations\202107090928512_mig_length.designer.cs">
+      <DependentUpon>202107090928512_mig_length.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -247,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107081557148_mig_admin-roles.resx">
       <DependentUpon>202107081557148_mig_admin-roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107090928512_mig_length.resx">
+      <DependentUpon>202107090928512_mig_length.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

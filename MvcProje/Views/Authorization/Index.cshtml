@@ -9,24 +9,27 @@
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        <th>Kullanıcı Mail</th>
-        <th>Yetki</th>
-        <th>Durum</th>
-        <th>Pasif Yap</th>
-        <th>Yetkisini Değiştir</th>
+        <th>KULLANICI MAİL</th>
+        <th>YETKİ</th>
+        <th>DURUM</th>
+        <th>PASİF YAP</th>
+        <th>YETKİSİNİ DEĞİŞTİR</th>
+        @*<th>SİL</th>
+            <th>GÜNCELLE</th>
+            <th>BAŞLIKLAR</th>*@
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <th>@item.AdminID</th>
             <td>@item.AdminUserName</td>
-            <td>@item.AdminRole</td>
-            <td>Aktif Yap</td>
-            <td><a href="/AdminCategory/DeleteCategory/@item.AdminID" class="btn btn-danger">Pasif Yap</a></td>
+            <td>@item.Role.RoleName</td>
+            <td>@item.AdminStatus</td>
+            <td><a href="/AdminCategory//@item.AdminID" class="btn btn-danger">Pasif Yap</a></td>
             <td><a href="/Authorization/EditAdmin/@item.AdminID" class="btn btn-warning">Yetkisini Değiştir</a></td>
-            
+            @*<td><a href="#" class="btn btn-primary">Başlık Detayları</a></td>*@
         </tr>
     }
 </table>
-<a href="/Authorization/AddAdmin/" class="btn btn-info">Yeni Admin Tanımla</a>
-
+<a href="/Register/Index/" class="btn btn-dark">Yeni Admin Ekle</a>
+<script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>

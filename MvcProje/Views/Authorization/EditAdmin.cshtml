@@ -17,8 +17,7 @@
     @Html.TextBoxFor(x => x.AdminPassword, new { @class = "form-control" })
     <br />
     @Html.Label("Rol")
-    @Html.TextBoxFor(x => x.AdminRole, new { @class = "form-control" })
-    <br />
+    @Html.DropDownListFor(c => c.RoleId, (List<SelectListItem>)ViewBag.valueadmin, new { @class = "form-control" })    <br />
     <button class="btn btn-success">Güncelle</button>
 </div>
 }

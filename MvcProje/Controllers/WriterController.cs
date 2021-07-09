@@ -33,10 +33,11 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult AddWriter(Writer p)
         {
-            
+
             ValidationResult results = writervalidator.Validate(p);
             if (results.IsValid)
             {
+                p.WriterRole = "B";
                 wm.WriterAdd(p);
                 return RedirectToAction("Index");
             }
@@ -48,6 +49,21 @@ namespace MvcProje.Controllers
                 }
             }
             return View();
+
+            //ValidationResult results = writervalidator.Validate(p);
+            //if (results.IsValid)
+            //{
+            //    wm.WriterAdd(p);
+            //    return RedirectToAction("Index");
+            //}
+            //else
+            //{
+            //    foreach (var item in results.Errors)
+            //    {
+            //        ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+            //    }
+            //}
+            //return View();
         }
 
         [HttpGet]

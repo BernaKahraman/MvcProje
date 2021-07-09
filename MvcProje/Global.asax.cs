@@ -12,9 +12,9 @@ namespace MvcProje
     {
         protected void Application_Start()
         {
-            
 
             GlobalFilters.Filters.Add(new AuthorizeAttribute());
+            //GlobalFilters.Filters.Add(new AuthorizeAttribute() { Roles = "B" });
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -11,13 +11,12 @@ namespace MvcProje.Controllers
 {
     public class TalentController : Controller
     {
-        
+
         TalentManager tm = new TalentManager(new EfTalentDal());
         public ActionResult Index()
         {
             var values = tm.GetList();
             return View(values);
         }
-
     }
 }

@@ -3271,12 +3271,12 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\GetContactDetails.cshtml" />
-    <Content Include="Views\Contact\ContactPartial.cshtml" />
+    <Content Include="Views\Contact\MessageListMenu.cshtml" />
     <Content Include="Views\Message\Inbox.cshtml" />
     <Content Include="Views\Message\Sendbox.cshtml" />
     <Content Include="Views\Message\NewMessage.cshtml" />
     <Content Include="Views\Message\GetInboxMessageDetails.cshtml" />
-    <Content Include="Views\Message\GetMessageDetails.cshtml" />
+    <Content Include="Views\Message\GetSendboxMessageDetails.cshtml" />
     <Content Include="Views\ErrorPage\Page404.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\About\AboutPartial.cshtml" />
@@ -3309,10 +3309,12 @@
     <Content Include="Views\Authorization\Index.cshtml" />
     <Content Include="Views\Authorization\EditAdmin.cshtml" />
     <Content Include="Views\Message\ReadMessage.cshtml" />
-    <Content Include="Views\Message\UnReadMessage.cshtml" />
     <Content Include="Views\Draft\Draft.cshtml" />
     <Content Include="Views\Draft\GetDraftDetails.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Views\WriterPanelMessage\ReadMessage.cshtml" />
+    <Content Include="Views\WriterPanelMessage\NoReadMessage.cshtml" />
+    <Content Include="Views\Message\NoReadMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

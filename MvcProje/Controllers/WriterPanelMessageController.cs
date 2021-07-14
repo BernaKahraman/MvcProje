@@ -32,8 +32,34 @@ namespace MvcProje.Controllers
             return View(messagelist);
         }
 
+        public ActionResult ReadMessage(string p)
+        {
+            string userEmail = (string)Session["WriterMail"];
+            p = userEmail;
+            var messagelist = mm.MessageRead(p);
+            return View(messagelist);
+
+        }
+
+        public ActionResult NoReadMessage(string p)
+        {
+            string userEmail = (string)Session["WriterMail"];
+            p = userEmail;
+            var messagelist = mm.MessageNoRead(p);
+            return View(messagelist);
+        }
+
         public PartialViewResult MessageListMenu()
         {
+            string userEmail = (string)Session["WriterMail"];
+            var gelen = mm.GetListInbox(userEmail).Count;
+            ViewBag.gelen = gelen;
+            var giden = mm.GetListSendbox(userEmail).Count;
+            ViewBag.giden = giden;
+            var okundu = mm.MessageRead(userEmail).Count;
+            ViewBag.okundu = okundu;
+            var okunmadı = mm.MessageNoRead(userEmail).Count;
+            ViewBag.okunmadı = okunmadı;
             return PartialView();
         }
 
@@ -42,6 +68,13 @@ namespace MvcProje.Controllers
             var values = mm.GetByID(id);
             return View(values);
 
+        }
+        public ActionResult Okundu(int id)
+        {
+            var values = mm.GetByID(id);
+            values.MessageRead = true;
+            mm.MessageUpdate(values);
+            return RedirectToAction("Inbox");
         }
 
         public ActionResult GetSendboxMessageDetails(int id)

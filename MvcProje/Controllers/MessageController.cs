@@ -16,110 +16,83 @@ namespace MvcProje.Controllers
         // GET: Message
         MessageManager mm = new MessageManager(new EfMessageDal());
         MessageValidator messagevalidator = new MessageValidator();
-        DraftController draftController = new DraftController();
-
+       
         [Authorize]
-        public ActionResult Inbox()
+        public ActionResult Inbox(string p)
         {
-            string p = (string)Session["WriterMail"];
-            var MessageList = mm.GetListInbox(p);
-            return View(MessageList);
+            string userEmail = (string)Session["AdminUserName"];
+            p = userEmail;
+            var messagelist = mm.GetListInbox(p);
+            return View(messagelist);
         }
-        public ActionResult Sendbox()
+        public ActionResult ReadMessage(string p)
         {
-            string p = (string)Session["WriterMail"];
+            string userEmail = (string)Session["AdminUserName"];
+            p = userEmail;
+            var messagelist = mm.MessageRead(p);
+            return View(messagelist);
+
+        }
+        public ActionResult Sendbox(string p)
+        {
+            string userEmail = (string)Session["AdminUserName"];
+            p = userEmail;
             var messagelist = mm.GetListSendbox(p);
             return View(messagelist);
         }
-
-        public ActionResult GetInboxMessageDetails(int id)
+        public ActionResult NoReadMessage(string p)
+        {
+            string userEmail = (string)Session["AdminUserName"];
+            p = userEmail;
+            var messagelist = mm.MessageNoRead(p);
+            return View(messagelist);
+        }
+        public ActionResult GetInBoxMessageDetails(int id)
         {
             var values = mm.GetByID(id);
             return View(values);
-
         }
 
-        public ActionResult GetMessageDetails(int id)
+        public ActionResult GetSendBoxMessageDetails(int id)
         {
             var values = mm.GetByID(id);
             return View(values);
-
         }
-
+        public ActionResult Okundu(int id)
+        {
+            var values = mm.GetByID(id);
+            values.MessageRead = true;
+            mm.MessageUpdate(values);
+            return RedirectToAction("Inbox");
+        }
         [HttpGet]
         public ActionResult NewMessage()
         {
             return View();
-
         }
-        [HttpPost, ValidateInput(false)]
-        public ActionResult NewMessage(Message p, string button)
+        [HttpPost]
+        public ActionResult NewMessage(Message p)
         {
             ValidationResult results = messagevalidator.Validate(p);
-            if (button == "draft")
+            if (results.IsValid)
             {
-                results = messagevalidator.Validate(p);
-                if (results.IsValid)
-                {
-                    Draft draft = new Draft();
-                    draft.ReceiverMail = p.ReceiverMail;
-                    draft.Subject = p.Subject;
-                    draft.DraftContent = p.MessageContent;
-                    draft.DraftDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                    draftController.AddDraft(draft);
-                    return RedirectToAction("Draft", "Draft");
-                }
-                else
-                {
-                    foreach (var item in results.Errors)
-                    {
-                        ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
-                    }
-                }
+                string userEmail = (string)Session["AdminUserName"];
+                p.SenderMail = userEmail;
+                p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+                mm.MessageAdd(p);
+                return RedirectToAction("SendBox");
             }
-            else if (button == "save")
+            else
             {
-                string sender = (string)Session["WriterMail"];
-                results = messagevalidator.Validate(p);
-                if (results.IsValid)
+                foreach (var x in results.Errors)
                 {
-                    p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                    p.SenderMail = sender;
-                    mm.MessageAdd(p);
-                    return RedirectToAction("SendBox");
-                }
-                else
-                {
-                    foreach (var item in results.Errors)
-                    {
-                        ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
-                    }
+                    ModelState.AddModelError(x.PropertyName, x.ErrorMessage);
                 }
             }
             return View();
         }
 
-        public ActionResult IsRead(int id)
-        {
-            var result = mm.GetByID(id);
-            if (result.IsRead == false)
-            {
-                result.IsRead = true;
-            }
-            mm.MessageUpdate(result);
-            return RedirectToAction("ReadMessage");
-        }
 
-        public ActionResult ReadMessage()
-        {
-            var readMessage = mm.GetList().Where(x => x.IsRead == true).ToList();
-            return View(readMessage);
-        }
 
-        public ActionResult UnReadMessage()
-        {
-            var unReadMessage = mm.GetListUnRead();
-            return View(unReadMessage);
-        }
     }
 }

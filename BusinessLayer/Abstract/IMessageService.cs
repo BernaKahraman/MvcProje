@@ -11,15 +11,16 @@ namespace BusinessLayer.Abstract
     {
         List<Message> GetListInbox(string p);
         List<Message> GetListSendbox(string p);
+
+        List<Message> MessageRead(string p);
+        List<Message> MessageNoRead(string p);
+
         void MessageAdd(Message message);
 
         //bulma işlemi için
         Message GetByID(int id);
         void MessageDelete(Message message);
         void MessageUpdate(Message message);
-        List<Message> GetList();
-
-        List<Message> GetListUnRead();
-
+        
     }
 }

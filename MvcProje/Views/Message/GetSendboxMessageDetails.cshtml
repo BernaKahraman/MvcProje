@@ -1,10 +1,8 @@
 ﻿@model EntityLayer.Concrete.Message
-
 @{
-    ViewBag.Title = "GetInboxMessageDetails";
+    ViewBag.Title = "GetSendboxMessageDetails";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
 
 <!DOCTYPE html>
 <html>
@@ -29,7 +27,7 @@
                 <div class="col-md-9">
                     <div class="card card-primary card-outline">
                         <div class="card-header">
-                            <a href="/Message/Okundu/@Model.MessageID" class="btn btn-info">Okundu Olarak İşaretle</a>
+                            <h3 class="card-title">Mesajı Oku</h3>
                             <div class="card-tools">
                                 <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Previous"><i class="fas fa-chevron-left"></i></a>
                                 <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Next"><i class="fas fa-chevron-right"></i></a>
@@ -42,7 +40,7 @@
                                 <h5>@Html.DisplayFor(x => x.Subject)</h5>
                                 <br />
                                 <h6>
-                                    Kimden: @Html.DisplayFor(x => x.SenderMail)
+                                    Alıcı: @Html.DisplayFor(x => x.ReceiverMail)
                                     <span class="mailbox-read-time float-right">
                                         @(((DateTime)Model.MessageDate).ToString("dd-MMMMM-yyyy"))
 

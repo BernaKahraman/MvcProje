@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Mesaj Sayfası</h1>
+                    <h1>Mesajlar</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -24,15 +24,14 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            @Html.Action("ContactPartial", "Contact")
-            <!-- /.col -->
+            @Html.Action("MessageListMenu", "Contact")
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Mesajlar</h3>
+                        <h3 class="card-title">Gelen Mesajlar</h3>
                         <div class="card-tools">
                             <div class="input-group input-group-sm">
-                                <input type="text" class="form-control" placeholder="Mail kutusunda ara">
+                                <input type="text" class="form-control" placeholder="Mail Kutusunda Ara">
                                 <div class="input-group-append">
                                     <div class="btn btn-primary">
                                         <i class="fas fa-search"></i>
@@ -69,7 +68,7 @@
                         <div class="table-responsive mailbox-messages">
                             <table class="table table-hover table-striped">
                                 <tbody>
-                                    @foreach (var item in Model)
+                                    @foreach (var x in Model)
                                     {
                                         <tr>
                                             <td>
@@ -78,16 +77,14 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="/Contact/GetContactDetails/@item.ContactID"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Contact/GetContactDetails/@item.ContactID">@item.UserName</a></td>
+                                            <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/Contact/GetContactDetails/@x.ContactID">@x.ContactName</a></td>
                                             <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.Message.Substring(0, 1)...
+                                                <b>@x.Subject</b> @x.Message.Substring(0, 10)...
                                             </td>
                                             <td class="mailbox-attachment"></td>
                                             <td class="mailbox-date">
-                                                <small>
-                                                    @(((DateTime)item.ContactDate).ToString("dd MMMM yyyy"))
-                                                </small>
+                                                @(((DateTime)x.ContactDate).ToString("dd-MMMMM-yyyy"))
                                             </td>
                                         </tr>
                                     }
@@ -132,4 +129,3 @@
 
 </body>
 </html>
-<script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>

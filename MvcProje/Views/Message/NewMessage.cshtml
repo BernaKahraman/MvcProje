@@ -31,6 +31,7 @@
                 <div class="col-sm-6">
                     <h1>Yeni Mesaj Sayfası</h1>
                 </div>
+
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -38,8 +39,7 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                @Html.Action("ContactPartial", "Contact")
-                <!-- /.col -->
+                @Html.Action("MessageListMenu", "Contact")
                 <div class="col-md-9">
                     @using (Html.BeginForm("NewMessage", "Message", FormMethod.Post))
                     {
@@ -50,21 +50,22 @@
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <div class="form-group">
-                                    @Html.Label("Alıcı:")
+                                    @Html.Label("Alıcı Adı")
                                     @Html.TextBoxFor(x => x.ReceiverMail, new { @class = "form-control" })
                                     @Html.ValidationMessageFor(x => x.ReceiverMail)
                                 </div>
                                 <div class="form-group">
-                                    @Html.Label("Konu:")
+                                    @Html.Label("Konu")
                                     @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
                                     @Html.ValidationMessageFor(x => x.Subject)
                                 </div>
                                 <div class="form-group">
-                                    @Html.Label("Mesaj:")
+                                    @Html.Label("Mesajınız")
+
                                     <textarea id="compose-textarea" name="MessageContent" class="form-control" style="height: 300px">
-                                
+                            
+                         
                     </textarea>
-                                    @Html.ValidationMessageFor(x => x.MessageContent)
                                 </div>
                                 <div class="form-group">
                                     <div class="btn btn-default btn-file">
@@ -84,9 +85,9 @@
                             </div>
                             <!-- /.card-footer -->
                         </div>
-                        <!-- /.card -->
                     }
-                    </div>
+                    <!-- /.card -->
+                </div>
                 <!-- /.col -->
             </div>
             <!-- /.row -->
@@ -106,6 +107,8 @@
     <!-- AdminLTE for demo purposes -->
     <script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
     <!-- Summernote -->
+
+
     <script src="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.min.js"></script>
     <!-- Page Script -->
     <script>

@@ -23,11 +23,6 @@ namespace BusinessLayer.Concrete
             return _messageDal.get(x => x.MessageID == id);
         }
 
-        public List<Message> GetList()
-        {
-            return _messageDal.List(x => x.ReceiverMail == "admin2@gmail.com").Where(x => x.IsRead == true).ToList();
-        }
-
         public List<Message> GetListInbox(string p)
         {
             return _messageDal.List(x => x.ReceiverMail == p);
@@ -38,11 +33,6 @@ namespace BusinessLayer.Concrete
             return _messageDal.List(x => x.SenderMail == p);
         }
 
-        public List<Message> GetListUnRead()
-        {
-            return _messageDal.List(x => x.ReceiverMail == "admin2@gmail.com").Where(x => x.IsRead == false).ToList();
-        }
-
         public void MessageAdd(Message message)
         {
             _messageDal.Insert(message);
@@ -51,6 +41,17 @@ namespace BusinessLayer.Concrete
         public void MessageDelete(Message message)
         {
             _messageDal.Delete(message);
+        }
+
+        public List<Message> MessageNoRead(string p)
+        {
+            return _messageDal.List(x => x.ReceiverMail == p).Where(y => y.MessageRead == true).ToList();
+        }
+
+        public List<Message> MessageRead(string p)
+        {
+            return _messageDal.List(x => x.ReceiverMail == p).Where(y => y.MessageRead == false).ToList();
+
         }
 
         public void MessageUpdate(Message message)

@@ -14,45 +14,42 @@
                 <li class="nav-item active">
                     <a href="/Contact/Index/" class="nav-link">
                         <i class="fas fa-mail-bulk"></i> İletişim
-                        <span class="badge bg-danger float-right">@ViewBag.contact</span>
+                        <span class="badge bg-primary float-right">@ViewBag.iletisim</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a href="/Message/Inbox/" class="nav-link">
                         <i class="fas fa-inbox"></i> Gelen Mesajlar
-                        <span class="badge bg-primary float-right">@ViewBag.receiverMail</span>
+                        <span class="badge bg-primary float-right">@ViewBag.gelen</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/Message/SendBox/" class="nav-link">
-                        <i class="far fa-envelope"></i> Gönderilen Mesajlar
-                        <span class="badge bg-success float-right">@ViewBag.senderMail</span>
+                    <a href="/Message/Sendbox/" class="nav-link">
+                        <i class="far fa-envelope"></i> Gönderilen Mesajar
+                        <span class="badge bg-primary float-right">@ViewBag.giden</span>
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/Message/NoReadMessage/" class="nav-link">
+                        <i class="far fa-envelope"></i> Okunmuş Mesajlar
+                        <span class="badge bg-primary float-right">@ViewBag.okunmadı</span>
+
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/Message/ReadMessage/" class="nav-link">
-                        <i class="far fa-envelope"></i> Okunmuş Mesajlar
-                        <span class="badge bg-primary float-right">@ViewBag.readMessage</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/Message/UnReadMessage/" class="nav-link">
                         <i class="far fa-envelope"></i> Okunmamış Mesajlar
-                        <span class="badge bg-danger float-right">@ViewBag.unReadMessage</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/Draft/Draft/" class="nav-link">
-                        <i class="far fa-file-alt"></i> Taslaklar
-                        <span class="badge bg-warning float-right">@ViewBag.draft</span>
+                        <span class="badge bg-primary float-right">@ViewBag.okundu</span>
+
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="fas fa-filter"></i> Spam
-                        <span class="badge bg-info float-right">0</span>
+                        <i class="far fa-file-alt"></i> Taslaklar
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="far fa-trash-alt"></i> Çöp Kutusu
@@ -65,7 +62,7 @@
     <!-- /.card -->
     <!--<div class="card">
         <div class="card-header">
-            <h3 class="card-title">Dİğer</h3>
+            <h3 class="card-title">Labels</h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>

@@ -12,14 +12,10 @@ namespace MvcProje.Controllers
 {
     public class ContactController : Controller
     {
-        // GET: Contact
-
-
-        Context _context = new Context();
         ContactManager cm = new ContactManager(new EfContactDal());
         MessageManager mm = new MessageManager(new EfMessageDal());
-        DraftManager draftManager = new DraftManager(new EfDraftDal());
-       
+        ContactValidator cv = new ContactValidator();
+
 
         public ActionResult Index()
         {
@@ -33,31 +29,19 @@ namespace MvcProje.Controllers
             return View(contactvalues);
 
         }
-        public PartialViewResult ContactPartial()
+        public PartialViewResult MessageListMenu()
         {
-
-
-            string p = (string)Session["WriterMail"];
-            var writeridinfo = _context.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
-
-            var receiverMail = _context.Messages.Count(m => m.ReceiverMail == p).ToString();
-            ViewBag.receiverMail = receiverMail;
-
-            var senderMail = _context.Messages.Count(m => m.SenderMail == p).ToString();
-            ViewBag.senderMail = senderMail;
-
-            var contact = _context.Contacts.Count().ToString();
-            ViewBag.contact = contact;
-
-            var draft = _context.Drafts.Count().ToString();
-            ViewBag.draft = draft;
-
-            var readMessage = mm.GetList().Count();
-            ViewBag.readMessage = readMessage;
-
-            var unReadMessage = mm.GetListUnRead().Count();
-            ViewBag.unReadMessage = unReadMessage;
-
+            string userEmail = (string)Session["AdminUserName"];
+            var contactvalues = cm.GetList().Count();
+            ViewBag.iletisim = contactvalues;
+            var gelen = mm.GetListInbox(userEmail).Count;
+            ViewBag.gelen = gelen;
+            var giden = mm.GetListSendbox(userEmail).Count;
+            ViewBag.giden = giden;
+            var okundu = mm.MessageRead(userEmail).Count;
+            ViewBag.okundu = okundu;
+            var okunmadı = mm.MessageNoRead(userEmail).Count;
+            ViewBag.okunmadı = okunmadı;
             return PartialView();
 
             ////toplam iletişim sayısı

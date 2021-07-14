@@ -172,6 +172,18 @@
     <Compile Include="Migrations\202107090928512_mig_length.designer.cs">
       <DependentUpon>202107090928512_mig_length.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107141142369_mig-messageread.cs" />
+    <Compile Include="Migrations\202107141142369_mig-messageread.designer.cs">
+      <DependentUpon>202107141142369_mig-messageread.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107141145106_mig_message_read.cs" />
+    <Compile Include="Migrations\202107141145106_mig_message_read.designer.cs">
+      <DependentUpon>202107141145106_mig_message_read.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107141212030_mig_contact.cs" />
+    <Compile Include="Migrations\202107141212030_mig_contact.designer.cs">
+      <DependentUpon>202107141212030_mig_contact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -254,6 +266,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107090928512_mig_length.resx">
       <DependentUpon>202107090928512_mig_length.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107141142369_mig-messageread.resx">
+      <DependentUpon>202107141142369_mig-messageread.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107141145106_mig_message_read.resx">
+      <DependentUpon>202107141145106_mig_message_read.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107141212030_mig_contact.resx">
+      <DependentUpon>202107141212030_mig_contact.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

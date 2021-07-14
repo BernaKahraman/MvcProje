@@ -12,12 +12,13 @@ namespace BusinessLayer.ValidationRules
     {
         public ContactValidator()
         {
-            RuleFor(x => x.UserMail).NotEmpty().WithMessage("Mail adresini boş geçemezsiniz");
-            RuleFor(x => x.Subject).NotEmpty().WithMessage("Konu Adını boş Geçemezsiniz."); //doğrulama kuralları -- (boş olamaz) seçildi.
-            RuleFor(x => x.UserName).NotEmpty().WithMessage("Kullanıcı adını boş geçemezsiniz.");
-            RuleFor(x => x.Subject).MinimumLength(3).WithMessage("Lütfen en az 3 karakter girişi yapınız. ");
-            RuleFor(x => x.UserName).MinimumLength(3).WithMessage("Lütfen en az 3 karakter girişi yapınız. ");
-            RuleFor(x => x.Subject).MaximumLength(50).WithMessage("Lütfen 50 karakterden fazla değer girişi yapmayın.");
+            RuleFor(x => x.ContactMail).NotEmpty().WithMessage("Mail Adresini Boş Geçemezsiniz");
+            RuleFor(x => x.Subject).NotEmpty().WithMessage("Konu Adını Boş Geçemezsiniz.");
+            RuleFor(x => x.ContactName).NotEmpty().WithMessage("Kullanıcı Adını Boş Geçemezsiniz.");
+            RuleFor(x => x.Subject).MinimumLength(3).WithMessage("Konu En az 3 Harf Olmalıdır.");
+            RuleFor(x => x.ContactName).MinimumLength(3).WithMessage("Kullanıcı Adınız En az 3 Harf Olmalıdır.");
+            RuleFor(x => x.Subject).MaximumLength(50).WithMessage("Lütfen 50 karakterden fazla giriş yapmayınız.");
+
         }
     }
 }

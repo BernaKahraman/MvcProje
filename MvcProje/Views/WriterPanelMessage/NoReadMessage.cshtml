@@ -1,9 +1,8 @@
 ﻿@using EntityLayer.Concrete
 @model List<Message>
-
 @{
-    ViewBag.Title = "ReadMessage";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "NoReadMessage";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -25,7 +24,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            @Html.Action("MessageListMenu", "Contact")
+            @Html.Action("MessageListMenu", "WriterPanelMessage")
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
@@ -79,9 +78,9 @@
                                                 </div>
                                             </td>
                                             <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Message/GetInBoxMessageDetails/@x.MessageID">@x.SenderMail</a></td>
+                                            <td class="mailbox-name"><a href="/WriterPanelMessage/GetInBoxMessageDetails/@x.MessageID">@x.SenderMail</a></td>
                                             <td class="mailbox-subject">
-                                                <b>@x.Subject</b> @x.MessageContent.Substring(0, 10)...
+                                                <b>@x.Subject</b> @x.MessageContent.Substring(0, 20)...
                                             </td>
                                             <td class="mailbox-attachment"></td>
                                             <td class="mailbox-date">
@@ -130,5 +129,3 @@
 
 </body>
 </html>
-
-

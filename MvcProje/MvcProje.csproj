@@ -364,6 +364,8 @@
     <Content Include="AdminLTE-3.0.4\images\newyork.jpg" />
     <Content Include="AdminLTE-3.0.4\images\paris.jpg" />
     <Content Include="AdminLTE-3.0.4\images\roma.jpg" />
+    <Content Include="AdminLTE-3.0.4\Image\Yetenek Kartı 1.JPG" />
+    <Content Include="AdminLTE-3.0.4\Image\Yetenek Kartı 2.JPG" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />
@@ -3317,6 +3319,7 @@
     <Content Include="Views\Message\NoReadMessage.cshtml" />
     <Content Include="Views\Talent\Add.cshtml" />
     <Content Include="Views\Talent\Update.cshtml" />
+    <Content Include="Views\Gallery\ImageAdd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

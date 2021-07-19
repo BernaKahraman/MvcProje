@@ -18,5 +18,38 @@ namespace MvcProje.Controllers
             var values = tm.GetList();
             return View(values);
         }
+
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Add(Talent talent)
+        {
+            tm.TalentAdd(talent);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Update(int id)
+        {
+            var result = tm.GetByID(id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Talent talent)
+        {
+            tm.TalentUpdate(talent);
+            return RedirectToAction("Index");
+        }
+        public ActionResult Delete(int id)
+        {
+            var result = tm.GetByID(id);
+            tm.TalentDelete(result);
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -3315,6 +3315,8 @@
     <Content Include="Views\WriterPanelMessage\ReadMessage.cshtml" />
     <Content Include="Views\WriterPanelMessage\NoReadMessage.cshtml" />
     <Content Include="Views\Message\NoReadMessage.cshtml" />
+    <Content Include="Views\Talent\Add.cshtml" />
+    <Content Include="Views\Talent\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

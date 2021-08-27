@@ -1,6 +1,7 @@
 <h1 align="center">100 Derste MVC Proje Kampı</h1>
 <h3 align="center">Sözlük Sitesi</h3>
 <p>Eğitmen : Murat Yücedağ - Eğitime ulaşmak için  <a href="https://www.youtube.com/watch?v=yFToRUL6h8A&list=PLKnjBHu2xXNNQJehhCg--CzQQMHXTsFAb">Tıklayınız</a></p>
+<p>Proje Videosu : <a href="https://www.youtube.com/watch?v=GNpbT0jYglo&t=68s">İzlemek için tıklayınız</a></p>
 
 <h2>Proje İlerleyişi</h2>
 <b>Ders 1-20 :</b>

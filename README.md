@@ -19,6 +19,7 @@
   <li>IRepository Interface</li>
   <li>Generic Interface</li>
   <li>Business Layer</li>
+  
 </ul>  
 
 <b>Ders 21-40 :</b>
